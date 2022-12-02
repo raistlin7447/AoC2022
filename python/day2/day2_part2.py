@@ -1,4 +1,4 @@
-# Part 1
+# Part 2
 from enum import Enum, IntEnum
 
 rounds = list(map(str.split, open('day2_input.txt').readlines()))
