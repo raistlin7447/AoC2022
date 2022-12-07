@@ -20,9 +20,6 @@ for line in input:
                 walk /= Path(part)
                 directories[walk] += int(size)
 
-answer = 0
-for directory, size in directories.items():
-    if size <= 100000:
-        answer += size
+answer = sum([size for size in directories.values() if size <= 100000])
 
 print(answer)

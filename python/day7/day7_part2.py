@@ -21,9 +21,7 @@ for line in input:
                 directories[walk] += int(size)
 
 needed_space = 30000000 - (70000000 - directories[Path("/").resolve()])
-answer = 70000000
-for directory, size in directories.items():
-    if needed_space <= size < answer:
-        answer = size
+
+answer = min([size for size in directories.values() if size >= needed_space])
 
 print(answer)
